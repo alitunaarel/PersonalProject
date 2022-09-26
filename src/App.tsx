@@ -1,28 +1,18 @@
 import { FC } from "react";
-//import { Wrapper, Title, Button, Input } from "./App.styles";
-import { PropsType } from "./App.types";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Product from "./components/pages/Product";
 
-const App: FC<PropsType> = () => {
-  // const { primary } = props;
+const App: FC = () => {
+ 
 
   return (
     <div>
-      {/* <Wrapper>
-        <Title>Hello World!</Title>
-        <Button>Primary</Button>
-        <Button primary={primary}>Primary</Button>
-        <Input placeholder="A small text input" />
-        <br />
-        <Input placeholder="A bigger text input" size="2em" />
-      </Wrapper> */}
-
       <Router>
         <Navbar/>
         <Routes>
           <Route path ="/"/>
-          <Route path ="/products"/> 
+          <Route path ="/products" element={<Product/>}/> 
           <Route path ="/contacts"/> 
           <Route path ="/about "/> 
         </Routes>
